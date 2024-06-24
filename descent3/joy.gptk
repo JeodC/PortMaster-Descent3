@@ -1,0 +1,41 @@
+# Universal controls, needed for menu -- DO NOT CHANGE
+back = esc
+start = enter
+up = up
+down = down
+left = left
+right = right
+
+a = ctrl
+a_hk = ]
+b = \
+b_hk = 1
+b_hk = add_shift
+y = f
+y_hk = [
+x = space
+l1 = z
+l1_hk = tab
+l1_hk = add_shift
+l2 = ,
+r1 = a
+r1_hk = f9
+r2 = .
+l3 = f2
+r3 = \"
+
+# Choices of: axial, radial, scaled_radial, sloped_axial, sloped_scaled_axial, hybrid
+deadzone_mode = scaled_radial
+deadzone = 2000
+deadzone_scale = 8
+deadzone_delay = 16 ## An alias for mouse delay
+
+# Use mouse movement for left analog stick
+left_analog_up = \"
+left_analog_down = \"
+left_analog_left = \"
+left_analog_right = \"
+right_analog_up = \"
+right_analog_down = \"
+right_analog_left = \"
+right_analog_right = \"
