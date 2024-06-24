@@ -43,7 +43,7 @@ You can use the `D-PAD` buttons in menus to select items and scroll pages.
 |Y|Fire Flare|
 |L1|Reverse|
 |L2|Scroll Primary Weapon|
-|L3|Options Menu (Requires a mouse)|
+|L3|Options Menu (Requires a mouse and Debug build)|
 |R1|Accelerate|
 |R2|Scroll Secondary Weapon|
 |R3|Not Set|
