@@ -6,7 +6,7 @@ down = down
 left = left
 right = right
 
-a = ctrl
+a = leftctrl
 a_hk = ]
 b = \
 b_hk = 1
