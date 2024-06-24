@@ -12,6 +12,7 @@ The following patches have been applied to this release:
 - Make mouse cursor invisible in menus in Release builds (still visible and usable in Debug builds)
 - Change level select menu to a listbox with pretty names for core levels
 - Add pregenerated `.Descent3Registry` and `Pilot.plt` files with default controls using analog joysticks if available and gptokeyb to emulate keyboard presses for buttons
+- Prefill savegame dialog with current level number if blank slot or different level than existing slot
 
 ## Installation
 Unzip to ports folder e.g. `/roms/ports/`. Purchase the full game from GOG or Steam, or use CD game data patched to v1.4. Then, add the following files to `descent3/gamedata`:
@@ -24,13 +25,56 @@ Filelist for full versions:
 │   │ └── any movie files (`.mve`) that came with your game. If you have the Linux Steam version, use steamcmd to get the windows movie files  
 │   └── d3.hog  
 │   └── extra.hog (this may be `merc.hog` depending on the platform you used to purchase the game)  
-│   └── extra1.hog
-│   └── extra13.hog
-│   └── ppics.hog
+│   └── extra1.hog  
+│   └── extra13.hog  
+│   └── ppics.hog  
 
 ## Configuration
 The included pilot file is tailored to retro handhelds with a combination of joystick and gptokeyb controls, since the port does not use `gamecontrollerdb.txt`. The launchscript selects this pilot file by default, 
 but you can modify the name by opening the file in a text editor.
+
+You can also edit the `.Descent3Registry` file in a text editor. The below table describes some of the relevant values and how to modify them.
+
+|Key|Description|
+|---|---|
+|RS_gamma|The gamma value, defaults to 1.5. Increasing it will increase brightness.|
+|SND_mastervol|Sound effect volume.|
+|MUS_mastervol|Music volume.|
+|RS_pixelerror|Pixel error tolerance. Best to leave as is.|
+|RS_terraindist|Float value. This is calculated in a formula, so best to leave it alone.|
+|Dynamic_Lighting|Boolean value. Turns dynamic lighting on or off.|
+|Outline_mode|Unused.|
+|Lighting_on|Boolean value. Turns mine lighting on or off.|
+|Render_floating_triggers||
+|TerrLeveling|Use 0 for off, 1 for medium, 2 for high.|
+|RoomLeveling|Use 0 for off, 1 for medium, 2 for high.|
+|Specmapping|Boolean value. Turns specular mapping on or off.|
+|FastHeadlight|Boolean value. Turns fast headlight on or off.|
+|MirrorSurfaces|Boolean value. Turns mirrored surfaces on or off.|
+|MissileView|Unused.|
+|RS_vsync|Boolean value. Turns vsync on or off.|
+|DetailScorchMarks|Boolean value. Turns scorch marks on or off.|
+|DetailWeaponCoronas|Boolean value. Turns weapon coronas on or off.|
+|DetailFog|Boolean value. Turns fog on or off.|
+|DetailCoronas|Boolean value. Turns coronas on or off.|
+|DetailProcedurals|Boolean value. Turns procedural textures on or off.|
+|DetailObjectComp|0 for low, 1 for medium, 2 for high.|
+|DetailPowerupHalos|Boolean value. Turns powerup halos on or off.|
+|RS_resolution|Leave this at 1, the scaling depends on it.|
+|RS_bitdepth|Can be 10 for 16-bit, or 20 for 32-bit color depth.|
+|RS_bilear|Boolean value. Turns bilinear filtering on or off.|
+|RS_mipping|Boolean value. Turns mipmapping on or off.|
+|RS_color_model|Do lighting based on none (0), intensity (1) or RGB (2).|
+|RS_light|Can be 0 for off, 1 for basic shading, 2 for smooth shading.|
+|RS_texture_quality|0 for low, 1 for medium, 2 for high.|
+|VoicePowerup|Boolean value, can be 0 or 1.|
+|VoiceAll|Boolean value, can be 0 or 1.|
+|EnableJoystickFF|Boolean value. Turns force feedback on or off.|
+|ForceFeedbackAutoCenter|Boolean value. Turns force feedback auto center on or off.|
+|ForceFeedbackGain|Adjust as needed.|
+|SoundQuality|0 for low, 2 for medium, 3 for high.|
+|SoundQuantity|The max quantity of sfx allowed to play at once. Ranges from 20-40. If modified, convert decimal number to dword.|
+
 
 ## Default Gameplay Controls
 You can use the `D-PAD` buttons in menus to select items and scroll pages.
