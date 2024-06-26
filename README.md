@@ -83,10 +83,10 @@ You can use the `D-PAD` buttons in menus to select items and scroll pages.
 |X|Secondary Fire|
 |Y|Fire Flare|
 |L1|Reverse|
-|L2|Scroll Primary Weapon|
-|L3|Options Menu (Requires a mouse and Debug build)|
 |R1|Accelerate|
+|L2|Scroll Primary Weapon|
 |R2|Scroll Secondary Weapon|
+|L3|Options Menu (Requires a mouse and Debug build)|
 |R3|Not Set|
 |D-PAD UP|Look Up|
 |D-PAD DOWN|Look Down|
@@ -98,10 +98,12 @@ You can use the `D-PAD` buttons in menus to select items and scroll pages.
 |SELECT|Back / Escape|
 |SELECT + Y|Previous Inventory Item|
 |SELECT + A|Next Inventory Item|
-|SELECT + B|Order Guidebot|
+|SELECT + B|Guidebot Menu|
 |SELECT + X|Use Afterburner|
 |SELECT + L1|Open Telcom (Briefing and Objectives)|
-|SELECT + R1|Save Game|
+|SELECT + L2|Load Game|
+|SELECT + R1|Toggle Headlight|
+|SELECT + R2|Save Game|
 
 ## Thanks
 fpasteau  

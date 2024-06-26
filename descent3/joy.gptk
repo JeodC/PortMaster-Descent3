@@ -9,8 +9,7 @@ right = right
 a = leftctrl
 a_hk = ]
 b = \
-b_hk = 1
-b_hk = add_shift
+b_hk = f4
 y = f
 y_hk = [
 x = space
@@ -19,20 +18,17 @@ l1 = z
 l1_hk = tab
 l1_hk = add_shift
 l2 = ,
+l2_hk = f3
+l2_hk = add_alt
 r1 = a
-r1_hk = f2
-r1_hk = add_alt
+r1_hk = h
 r2 = .
+r2_hk = f2
+r2_hk = add_alt
 l3 = f2
 r3 = \"
 
-# Choices of: axial, radial, scaled_radial, sloped_axial, sloped_scaled_axial, hybrid
-deadzone_mode = scaled_radial
-deadzone = 2000
-deadzone_scale = 8
-deadzone_delay = 16 ## An alias for mouse delay
-
-# Use mouse movement for left analog stick
+# Defer to SDL controls for joysticks
 left_analog_up = \"
 left_analog_down = \"
 left_analog_left = \"
@@ -41,3 +37,12 @@ right_analog_up = \"
 right_analog_down = \"
 right_analog_left = \"
 right_analog_right = \"
+
+# Unused controls
+# r = Rear View
+# f3 = Toggle Cockpit
+# f5 = Start/Stop Demo Recording
+# shift + f1 = Cycle Left Window
+# shift + f2 = Cycle Right Window
+# shift + f8 = Display Ship Message Log
+# shift + f9 = Display HUD Message Console
