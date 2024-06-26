@@ -33,45 +33,7 @@ Filelist for full versions:
 The included pilot file is tailored to retro handhelds with a combination of joystick and gptokeyb controls, since the port does not use `gamecontrollerdb.txt`. The launchscript selects this pilot file by default, 
 but you can modify the name by opening the file in a text editor.
 
-You can also edit the `.Descent3Registry` file in a text editor. The below table describes some of the relevant values and how to modify them.
-
-|Key|Description|
-|---|---|
-|RS_gamma|The gamma value, defaults to 1.5. Increasing it will increase brightness.|
-|SND_mastervol|Sound effect volume.|
-|MUS_mastervol|Music volume.|
-|RS_pixelerror|Terrain pixel error. Lowering it can increase performance.|
-|RS_terraindist|Render distance. Should usually be 200.000000.|
-|Dynamic_Lighting|Boolean value. Turns dynamic lighting on or off.|
-|Lighting_on|Boolean value. Turns mine lighting on or off.|
-|TerrLeveling|Use 0 for off, 1 for medium, 2 for high.|
-|RoomLeveling|Use 0 for off, 1 for medium, 2 for high.|
-|Specmapping|Boolean value. Turns specular mapping on or off.|
-|FastHeadlight|Boolean value. Turns fast headlight on or off.|
-|MirrorSurfaces|Boolean value. Turns mirrored surfaces on or off.|
-|MissileView|Boolean value. Turns guided missile view on or off.|
-|RS_vsync|Boolean value. Turns vsync on or off.|
-|DetailScorchMarks|Boolean value. Turns scorch marks on or off.|
-|DetailWeaponCoronas|Boolean value. Turns weapon coronas on or off.|
-|DetailFog|Boolean value. Turns fog on or off.|
-|DetailCoronas|Boolean value. Turns coronas on or off.|
-|DetailProcedurals|Boolean value. Turns procedural textures on or off.|
-|DetailObjectComp|0 for low, 1 for medium, 2 for high.|
-|DetailPowerupHalos|Boolean value. Turns powerup halos on or off.|
-|RS_resolution|Leave this at 1, the scaling depends on it.|
-|RS_bitdepth|Can be 10 for 16-bit, or 20 for 32-bit color depth.|
-|RS_bilear|Boolean value. Turns bilinear filtering on or off.|
-|RS_mipping|Boolean value. Turns mipmapping on or off.|
-|RS_color_model|Do lighting based on none (0), intensity (1) or RGB (2).|
-|RS_light|Can be 0 for off, 1 for basic shading, 2 for smooth shading.|
-|RS_texture_quality|0 for low, 1 for medium, 2 for high.|
-|VoicePowerup|Boolean value, can be 0 or 1.|
-|VoiceAll|Boolean value, can be 0 or 1.|
-|EnableJoystickFF|Boolean value. Turns force feedback on or off.|
-|ForceFeedbackAutoCenter|Boolean value. Turns force feedback auto center on or off.|
-|ForceFeedbackGain|Adjust as needed.|
-|SoundQuality|0 for low, 2 for medium, 3 for high.|
-|SoundQuantity|The max quantity of sfx allowed to play at once. Ranges from 20-40. If modified, convert decimal number to dword.|
+You can modify game options in `d3.ini`.
 
 ## Default Gameplay Controls
 You can use the `D-PAD` buttons in menus to select items and scroll pages.
@@ -102,7 +64,7 @@ You can use the `D-PAD` buttons in menus to select items and scroll pages.
 |SELECT + X|Use Afterburner|
 |SELECT + L1|Open Telcom (Briefing and Objectives)|
 |SELECT + L2|Load Game|
-|SELECT + R1|Toggle Headlight|
+|SELECT + R1|View Ship Log|
 |SELECT + R2|Save Game|
 
 ## Thanks
