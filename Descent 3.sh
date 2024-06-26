@@ -42,6 +42,10 @@ cd $GAMEDIR
 rm -rf "$XDG_DATA_HOME/Outrage Entertainment/Descent 3"
 ln -s $GAMEDIR "$XDG_DATA_HOME/Outrage Entertainment/Descent 3"
 
+# Delete everything in the cache directory
+rm -rf "$GAMEDIR/gamedata/custom/cache/"
+mkdir "$GAMEDIR/gamedata/custom/cache/"
+
 # Setup gl4es environment
 if [ -f "${controlfolder}/libgl_${CFW_NAME}.txt" ]; then 
   source "${controlfolder}/libgl_${CFW_NAME}.txt"
