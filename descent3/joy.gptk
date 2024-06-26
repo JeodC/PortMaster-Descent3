@@ -14,6 +14,7 @@ b_hk = add_shift
 y = f
 y_hk = [
 x = space
+x_hk = s
 l1 = z
 l1_hk = tab
 l1_hk = add_shift
@@ -22,7 +23,6 @@ r1 = a
 r1_hk = f2
 r1_hk = add_alt
 r2 = .
-r2_hk = a
 l3 = f2
 r3 = \"
 
