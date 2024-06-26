@@ -19,12 +19,21 @@ get_controls
 
 GAMEDIR="/$directory/ports/descent3"
 DEVICE_ARCH="${DEVICE_ARCH:-aarch64}"
+DEBUGMODE=0
 
 # Get the CFW to determine which binary to use
-if [ $CFW_NAME == "ArkOS" ] || [ "$CFW_NAME" == 'ArkOS wuMMLe' ]  || [ "$CFW_NAME" == "knulli" ]; then
-  GAME="Descent3_Compatibility"
+if [ $DEBUGMODE == 0 ]; then
+  if [ $CFW_NAME == "ArkOS" ] || [ "$CFW_NAME" == 'ArkOS wuMMLe' ] || [ "$CFW_NAME" == "knulli" ]; then
+    GAME="game_comp"
+  else
+    GAME="game"
+  fi
 else
-  GAME="Descent3"
+  if [ $CFW_NAME == "ArkOS" ] || [ "$CFW_NAME" == 'ArkOS wuMMLe' ] || [ "$CFW_NAME" == "knulli" ]; then
+    GAME="bin/dbg_comp"
+  else
+    GAME="bin/dbg"
+  fi
 fi
 
 cd $GAMEDIR
