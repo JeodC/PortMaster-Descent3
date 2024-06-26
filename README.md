@@ -40,18 +40,16 @@ You can also edit the `.Descent3Registry` file in a text editor. The below table
 |RS_gamma|The gamma value, defaults to 1.5. Increasing it will increase brightness.|
 |SND_mastervol|Sound effect volume.|
 |MUS_mastervol|Music volume.|
-|RS_pixelerror|Pixel error tolerance. Best to leave as is.|
-|RS_terraindist|Float value. This is calculated in a formula, so best to leave it alone.|
+|RS_pixelerror|Terrain pixel error. Lowering it can increase performance.|
+|RS_terraindist|Render distance. Should usually be 200.000000.|
 |Dynamic_Lighting|Boolean value. Turns dynamic lighting on or off.|
-|Outline_mode|Unused.|
 |Lighting_on|Boolean value. Turns mine lighting on or off.|
-|Render_floating_triggers||
 |TerrLeveling|Use 0 for off, 1 for medium, 2 for high.|
 |RoomLeveling|Use 0 for off, 1 for medium, 2 for high.|
 |Specmapping|Boolean value. Turns specular mapping on or off.|
 |FastHeadlight|Boolean value. Turns fast headlight on or off.|
 |MirrorSurfaces|Boolean value. Turns mirrored surfaces on or off.|
-|MissileView|Unused.|
+|MissileView|Boolean value. Turns guided missile view on or off.|
 |RS_vsync|Boolean value. Turns vsync on or off.|
 |DetailScorchMarks|Boolean value. Turns scorch marks on or off.|
 |DetailWeaponCoronas|Boolean value. Turns weapon coronas on or off.|
@@ -74,7 +72,6 @@ You can also edit the `.Descent3Registry` file in a text editor. The below table
 |ForceFeedbackGain|Adjust as needed.|
 |SoundQuality|0 for low, 2 for medium, 3 for high.|
 |SoundQuantity|The max quantity of sfx allowed to play at once. Ranges from 20-40. If modified, convert decimal number to dword.|
-
 
 ## Default Gameplay Controls
 You can use the `D-PAD` buttons in menus to select items and scroll pages.
@@ -102,6 +99,7 @@ You can use the `D-PAD` buttons in menus to select items and scroll pages.
 |SELECT + Y|Previous Inventory Item|
 |SELECT + A|Next Inventory Item|
 |SELECT + B|Order Guidebot|
+|SELECT + X|Use Afterburner|
 |SELECT + L1|Open Telcom (Briefing and Objectives)|
 |SELECT + R1|Save Game|
 
