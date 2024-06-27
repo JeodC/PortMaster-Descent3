@@ -9,7 +9,6 @@
 "RS_gamma"="2.000000"
 "RS_terraindist"="200.000000"
 "Dynamic_Lighting"=dword:1
-"Lighting_on"=dword:1
 "RS_vsync"=dword:1
 "RS_bilear"=dword:1
 "RS_mipping"=dword:1
