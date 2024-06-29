@@ -37,6 +37,8 @@ but you can modify the name by opening the file in a text editor.
 
 You can modify game options in `d3.ini` or ingame using buttons--R1 to scroll options, START to confirm.
 
+If you need to invert joystick axis, open `descent3/config/joy.gptk` and change the line `r1_hk = f8` to `r1_hk = /`. Save the file and open the game, and in the config options you can use `HOTKEY + R1` to open the invert dialog. If you don't care about the ship log, you can keep things this way, otherwise change `joy.gptk` again after you're done.
+
 ## Default Gameplay Controls
 You can use the `D-PAD` buttons in menus to select items and scroll pages.
 
@@ -50,8 +52,8 @@ You can use the `D-PAD` buttons in menus to select items and scroll pages.
 |R1|Scroll Menu Options / Accelerate|
 |L2|Scroll Primary Weapon|
 |R2|Scroll Secondary Weapon|
-|L3|Options Menu (Requires a mouse and Debug build)|
-|R3|Not Set|
+|L3|Options Menu|
+|R3|Joystick Menu (Invert controls)|
 |D-PAD UP|Look Up|
 |D-PAD DOWN|Look Down|
 |D-PAD LEFT|Turn Left|
