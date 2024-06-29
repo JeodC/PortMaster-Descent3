@@ -7,7 +7,7 @@
   ],
   "items_opt": [],
   "attr": {
-    "title": "Descent 3",
+    "title": "Descent III",
     "porter": [
       "Jeod",
 	  "fpasteau"
@@ -18,7 +18,7 @@
       "fps"
     ],
     "image": null,
-    "rtr": true,
+    "rtr": false,
     "exp": false,
     "runtime": null,
     "reqs": [],

@@ -59,9 +59,9 @@ fi
 export LD_LIBRARY_PATH="$GAMEDIR/libs.$DEVICE_ARCH:/usr/lib:$LD_LIBRARY_PATH"
 
 # Run the game
-$GPTOKEYB "$GAME" -c "config/joy.gptk" & 
+$GPTOKEYB game -c "config/joy.gptk" & 
 SDL_GAMECONTROLLERCONFIG="$sdl_controllerconfig"
-./game -setdir "$GAMEDIR/gamedata" -pilot Player -nomotionblur -logfile $ARG
+./game -setdir "$GAMEDIR/gamedata" -pilot Player -nooutragelogo -nomotionblur -logfile $ARG
 
 $ESUDO kill -9 $(pidof gptokeyb)
 $ESUDO systemctl restart oga_events & 

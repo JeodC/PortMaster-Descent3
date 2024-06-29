@@ -4,9 +4,8 @@
 "Build"=dword:0
 [Descent3]
 "local directory"="/storage/roms/ports/descent3/"
-"net directory"=""
 "PredefDetailSetting"=dword:4
-"RS_gamma"="2.000000"
+"RS_gamma"="1.500000"
 "RS_terraindist"="200.000000"
 "Dynamic_Lighting"=dword:1
 "RS_vsync"=dword:1
@@ -40,4 +39,9 @@
 "VoiceAll"=dword:1
 "ForceFeedbackAutoCenter"=dword:1
 "ForceFeedbackGain"=dword:64
-"Default_pilot"=" "
+"Default_pilot"="Player.plt"
+"DirectIP"="NULL"
+"DefaultNetConn"="Parallax Online"
+"TrackerLogin"=""
+"TrackerPassword"=""
+"BypassChat"=dword:1

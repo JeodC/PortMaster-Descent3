@@ -28,6 +28,9 @@ key_mapping=(
     ["SoundVolume"]="SND_mastervol"
     ["SpecularMapping"]="Specmapping"
     ["TerrainAutoleveling"]="TerrLeveling"
+    ["PXOLogin"]="TrackerLogin"
+    ["PXOPassword"]="TrackerPassword"
+    ["DirectIP"]="DirectIP"
 )
 
 key_types=(
@@ -58,6 +61,9 @@ key_types=(
     ["MirrorSurfaces"]="dword"
     ["FastHeadlight"]="dword"
     ["MissileView"]="dword"
+    ["TrackerLogin"]="string"
+    ["TrackerPassword"]="string"
+    ["DirectIP"]="string"
 )
 
 # Function to update the .Descent3Registry file based on user-friendly ini values
