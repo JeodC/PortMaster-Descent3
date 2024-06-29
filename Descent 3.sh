@@ -25,21 +25,6 @@ DEBUGMODE=0
 declare -A key_mapping
 declare -A key_types
 
-# Get the CFW to determine which binary to use
-if [ $DEBUGMODE == 0 ]; then
-  if [ $CFW_NAME == "ArkOS" ] || [ "$CFW_NAME" == 'ArkOS wuMMLe' ] || [ "$CFW_NAME" == "knulli" ]; then
-    GAME="game_comp"
-  else
-    GAME="game"
-  fi
-else
-  if [ $CFW_NAME == "ArkOS" ] || [ "$CFW_NAME" == 'ArkOS wuMMLe' ] || [ "$CFW_NAME" == "knulli" ]; then
-    GAME="bin/dbg_comp"
-  else
-    GAME="bin/dbg"
-  fi
-fi
-
 cd $GAMEDIR
 
 # Setup permissions
@@ -76,7 +61,7 @@ export LD_LIBRARY_PATH="$GAMEDIR/libs.$DEVICE_ARCH:/usr/lib:$LD_LIBRARY_PATH"
 # Run the game
 $GPTOKEYB "$GAME" -c "config/joy.gptk" & 
 SDL_GAMECONTROLLERCONFIG="$sdl_controllerconfig"
-./$GAME -setdir "$GAMEDIR/gamedata" -pilot Player -nomotionblur -logfile $ARG
+./game -setdir "$GAMEDIR/gamedata" -pilot Player -nomotionblur -logfile $ARG
 
 $ESUDO kill -9 $(pidof gptokeyb)
 $ESUDO systemctl restart oga_events & 

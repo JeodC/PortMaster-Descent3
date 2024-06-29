@@ -13,6 +13,8 @@ The following patches have been applied to this release:
 - Change level select menu to a listbox with pretty names for core levels
 - Add pregenerated `.Descent3Registry` and `Pilot.plt` files with default controls using analog joysticks if available and gptokeyb to emulate keyboard presses for buttons
 - Prefill savegame dialog with current level number if blank slot or different level than existing slot
+- Reveal secret levels on campaign completion
+- Remove multiplayer menu option and access (for now)
 
 ## Installation
 Unzip to ports folder e.g. `/roms/ports/`. Purchase the full game from GOG or Steam, or use CD game data patched to v1.4. Then, add the following files to `descent3/gamedata`:
@@ -33,7 +35,7 @@ Filelist for full versions:
 The included pilot file is tailored to retro handhelds with a combination of joystick and gptokeyb controls, since the port does not use `gamecontrollerdb.txt`. The launchscript selects this pilot file by default, 
 but you can modify the name by opening the file in a text editor.
 
-You can modify game options in `d3.ini`.
+You can modify game options in `d3.ini` or ingame using buttons--R1 to scroll options, START to confirm.
 
 ## Default Gameplay Controls
 You can use the `D-PAD` buttons in menus to select items and scroll pages.
@@ -45,7 +47,7 @@ You can use the `D-PAD` buttons in menus to select items and scroll pages.
 |X|Secondary Fire|
 |Y|Fire Flare|
 |L1|Reverse|
-|R1|Accelerate|
+|R1|Scroll Menu Options / Accelerate|
 |L2|Scroll Primary Weapon|
 |R2|Scroll Secondary Weapon|
 |L3|Options Menu (Requires a mouse and Debug build)|
