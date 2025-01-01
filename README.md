@@ -19,7 +19,8 @@ The following patches have been applied to this release:
 ## Installation
 Unzip to ports folder e.g. `/roms/ports/`. Purchase the full game from GOG or Steam, or use CD game data patched to v1.4. Then, add the following files to `descent3/gamedata`:
 
-Filelist for full versions:  
+Filelist for full versions:
+<pre>
 ├── descent3/gamedata  
 │   ├── missions/  
 │   │ └── any mission files (`.mn3`) and `d3voice1.hog` and `d3voice2.hog` if they came with your game  
@@ -29,7 +30,8 @@ Filelist for full versions:
 │   └── extra.hog (this may be `merc.hog` depending on the platform you used to purchase the game)  
 │   └── extra1.hog  
 │   └── extra13.hog  
-│   └── ppics.hog  
+│   └── ppics.hog
+</pre>
 
 ## Configuration
 The included pilot file is tailored to retro handhelds with a combination of joystick and gptokeyb controls, since the port does not use `gamecontrollerdb.txt`. The launchscript selects this pilot file by default, 
