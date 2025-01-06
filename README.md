@@ -20,7 +20,7 @@ The following patches have been applied to this release:
 Unzip to ports folder e.g. `/roms/ports/`. Purchase the full game from GOG or Steam, or use CD game data patched to v1.4. Then, add the following files to `descent3/gamedata`:
 
 Filelist for full versions:
-<pre>
+```
 ├── descent3/gamedata  
 │   ├── missions/  
 │   │ └── any mission files (`.mn3`) and `d3voice1.hog` and `d3voice2.hog` if they came with your game  
@@ -31,13 +31,12 @@ Filelist for full versions:
 │   └── extra1.hog  
 │   └── extra13.hog  
 │   └── ppics.hog
-</pre>
+```
 
 ## Configuration
-The included pilot file is tailored to retro handhelds with a combination of joystick and gptokeyb controls, since the port does not use `gamecontrollerdb.txt`. The launchscript selects this pilot file by default, 
-but you can modify the name by opening the file in a text editor.
+The included pilot file is tailored to retro handhelds with a combination of joystick and gptokeyb controls, since the port does not use `gamecontrollerdb.txt`. The launchscript selects this pilot file by default, but you can modify the name by opening the file in a text editor.
 
-You can modify game options in `d3.ini` or ingame using buttons--R1 to scroll options, START to confirm.
+You can modify game options in `settings.json` or ingame using buttons--R1 to scroll options, START to confirm.
 
 If you need to invert joystick axis, open `descent3/config/joy.gptk` and change the line `r1_hk = f8` to `r1_hk = /`. Save the file and open the game, and in the config options you can use `HOTKEY + R1` to open the invert dialog. If you don't care about the ship log, you can keep things this way, otherwise change `joy.gptk` again after you're done.
 
