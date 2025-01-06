@@ -47,10 +47,12 @@ parse_ini() {
     return 1
   fi
 
-  if grep -q "^\"$key\"=\".*\"" "$file"; then
-    sed -i "s|^\"$key\"=\".*\"|$entry|" "$file" || echo "Failed to update $file"
+  if grep -q "^\"$key\"=" "$file"; then
+    # Update the existing key
+    sed -i "s|^\"$key\"=.*|$entry|" "$file" || echo "Failed to update $file"
   else
-    echo "$entry" >> "$file" || echo "Failed to append to $file"
+    # Do not add new keys
+    echo "Key \"$key\" not found in $file, skipping update."
   fi
 }
 
