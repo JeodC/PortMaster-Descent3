@@ -3,13 +3,6 @@
 GAMEDIR="$PWD"
 CONFIG_FILE="$GAMEDIR/settings.json"
 REGFILE="$GAMEDIR/config/.Descent3Registry"
-LOGFILE="$GAMEDIR/log.txt"
-
-# Ensure jq is available
-if ! command -v jq >/dev/null 2>&1; then
-  echo "jq is required but not installed. Exiting." | tee -a "$LOGFILE"
-  exit 1
-fi
 
 # Define key mapping using simple space-separated strings
 key_mapping_keys="ProceduralTextures Fog LightCoronas WeaponCoronas ObjectComplexity PowerupHalos ScorchMarks DynamicLighting ForceFeedback SimpleHeadlight Gamma TerrainDetail MipMapping ShaderType RenderDistance TextureQuality VSync BilinearFiltering GuidedMissileView MusicVolume MirrorSurfaces MineAutoleveling SoundQuality SoundQuantity SoundVolume SpecularMapping TerrainAutoleveling PXOLogin PXOPassword DirectIP"
@@ -43,12 +36,7 @@ get_value_from_key() {
 get_json_value() {
   local key_path="$1"
   local value
-  echo "Querying JSON path: $key_path" >> "$LOGFILE"  # Log the query
-  value=$(jq -r "$key_path" "$CONFIG_FILE" 2>>"$LOGFILE")
-
-  if [ "$value" = "null" ]; then
-    echo "jq returned null for path: $key_path" >> "$LOGFILE"  # Log if null
-  fi
+  value=$(jq -r "$key_path" "$CONFIG_FILE")
 
   echo "$value"
 }
@@ -86,19 +74,14 @@ for key in $key_mapping_keys; do
     # Check if the key belongs to a specific section (e.g., Video, Audio, Detail, etc.)
     if [[ "$key" =~ ^(ObjectComplexity|TerrainDetail|TerrainAutoleveling|MineAutoleveling|ScorchMarks|Fog|LightCoronas|WeaponCoronas|ProceduralTextures|PowerupHalos|SpecularMapping|MirrorSurfaces)$ ]]; then
         json_path=".Detail.$json_path"
-        echo "Matched Detail section for key: $key" >> "$LOGFILE"
     elif [[ "$key" =~ ^(PXOLogin|PXOPassword|DirectIP)$ ]]; then
         json_path=".Multiplayer.$json_path"
-        echo "Matched Multiplayer section for key: $key" >> "$LOGFILE"
     elif [[ "$key" =~ ^(ForceFeedback|SimpleHeadlight|GuidedMissileView)$ ]]; then
         json_path=".Miscellaneous.$json_path"
-        echo "Matched Miscellaneous section for key: $key" >> "$LOGFILE"
     elif [[ "$key" =~ ^(Gamma|RenderDistance|DynamicLighting|VSync|BilinearFiltering|MipMapping|ShaderType|TextureQuality)$ ]]; then
         json_path=".Video.$json_path"
-        echo "Matched Video section for key: $key" >> "$LOGFILE"
     elif [[ "$key" =~ ^(SoundVolume|MusicVolume|SoundQuality|SoundQuantity)$ ]]; then
         json_path=".Audio.$json_path"
-        echo "Matched Audio section for key: $key" >> "$LOGFILE"
     fi
 
     value=$(get_json_value "$json_path")
@@ -107,7 +90,6 @@ for key in $key_mapping_keys; do
     if [ "$key" = "TerrainDetail" ] && [ -n "$value" ] && [ "$value" != "null" ]; then
         # Invert the TerrainDetail value (20 becomes 0, 19 becomes 1, etc.)
         value=$((20 - value))
-        echo "Inverting TerrainDetail value: $value" >> "$LOGFILE"
     fi
 
     registry_key=$(get_value_from_key "$key" "$key_mapping_keys" "$key_mapping_values")
@@ -117,7 +99,6 @@ for key in $key_mapping_keys; do
 
     # Check if value is valid and not null
     if [ -n "$value" ] && [ "$value" != "null" ]; then
-        echo "Mapping key: $key to registry key: $registry_key, Type: $registry_type, Value: $value" >> "$LOGFILE"
         write_registry "$registry_key" "$registry_type" "$value"
     fi
 done
